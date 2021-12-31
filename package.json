@@ -1,0 +1,23 @@
+{
+  "name": "test-github-docker-registry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magdyamr542/test-github-docker-registry.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magdyamr542/test-github-docker-registry/issues"
+  },
+  "homepage": "https://github.com/magdyamr542/test-github-docker-registry#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
