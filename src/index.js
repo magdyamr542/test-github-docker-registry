@@ -5,6 +5,7 @@ const main = () => {
 const app = express();
 
 app.get("/" , (req,res) => {
+  console.log("GET /");
   res.send({message : "Hello world"});
 })
 

@@ -1,7 +1,7 @@
 version: "3"
 services:
   backend:
-    image: ghcr.io/magdyamr542/test-github-docker-registry:0.0
+    image: ghcr.io/magdyamr542/test-github-docker-registry:0
     container_name: node-app
     volumes: 
       - ./:/usr/src/app
