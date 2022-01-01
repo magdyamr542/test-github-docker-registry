@@ -33,9 +33,8 @@ jobs:
 
       - name: Push the docker image
         run: |
-          IMAGE_ID={{env.REGISTRY}}/{{env.IMAGE_NAME}}
+          IMAGE_ID=${{env.REGISTRY}}/${{env.IMAGE_NAME}}
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-          IMAGE_TAG=$IMAGE_ID:{{env.IMAGE_VERSION}}
-          echo  "The tag is $IMAGE_TAG"
+          IMAGE_TAG=$IMAGE_ID:${{env.IMAGE_VERSION}}
           docker tag $IMAGE_NAME $IMAGE_TAG
           docker push $IMAGE_ID:$VERSION
