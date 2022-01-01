@@ -22,7 +22,7 @@ jobs:
 
       - name: Build image
         run: |
-             docker build . --file Dockerfile --tag $IMAGE_NAME 
+             docker build . --file Dockerfile --tag {{env.IMAGE_NAME}}
 
       - name: Log in to the Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
@@ -35,5 +35,6 @@ jobs:
         run: |
           IMAGE_ID={{env.REGISTRY}}/{{env.IMAGE_NAME}}
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-          docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
+          IMAGE_TAG=$IMAGE_ID:{{env.IMAGE_VERSION}}
+          docker tag {{env.IMAGE_NAME}} $IMAGE_TAG
           docker push $IMAGE_ID:$VERSION
