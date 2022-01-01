@@ -2,19 +2,21 @@ const express = require("express");
 
 const main = () => {
 
-const app = express();
+    const app = express();
 
-app.get("/" , (req,res) => {
-  console.log("Got request");
-  console.log("GET /");
-  res.send({message : "Hello world"});
-})
+    app.get("/", (req, res) => {
+        console.log("Got request");
+        console.log("GET /");
+        res.send({
+            message: "Hello world"
+        });
+    })
 
-const PORT = 3333;
+    const PORT = 3333;
 
-app.listen(PORT , ()=> {
-  console.log(`Server up on port ${PORT}`)
-});
+    app.listen(PORT, () => {
+        console.log(`Server up on port ${PORT}`)
+    });
 
 }
 
