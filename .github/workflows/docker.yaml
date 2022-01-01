@@ -37,4 +37,5 @@ jobs:
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
           IMAGE_TAG=$IMAGE_ID:${{env.IMAGE_VERSION}}
           docker tag $IMAGE_NAME $IMAGE_TAG
+          echo "The image tag is $IMAGE_TAG"
           docker push $IMAGE_TAG
