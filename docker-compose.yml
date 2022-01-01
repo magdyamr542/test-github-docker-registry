@@ -2,6 +2,7 @@ version: "3"
 services:
   backend:
     image: ghcr.io/magdyamr542/test-github-docker-registry:0
+    pull_policy: always
     container_name: node-app
     volumes: 
       - ./:/usr/src/app
